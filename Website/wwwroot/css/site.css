@@ -1,0 +1,78 @@
+html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  margin-bottom: 60px;
+}
+
+.entrees {
+    color: royalblue;
+    font-weight: bold;
+}
+
+.royalblue {
+    color: royalblue !important;
+}
+
+.name {
+    font-size: 20px;
+    font-weight: 800;
+}
+
+ul {
+    list-style-position: inside;
+}
+
+.prep-info {
+    font-style: italic;
+    font-weight:500;
+    color: black;
+}
+
+.sides {
+    color: seagreen;
+    font-weight: bold;
+}
+
+.drinks {
+    color: darkorange;
+    font-weight: bold;
+}
+
+.kids-meals {
+    color: darkred;
+    font-weight: bold;
+}
+
+.seagreen {
+    color: seagreen !important;
+}
+
+.darkorange {
+    color: darkorange !important;
+}
+
+.darkred {
+    color: darkred !important;
+}
+
+.ingredients {
+    color: rebeccapurple;
+    font-weight: bold;
+}
+
+.rebeccapurple {
+    color: rebeccapurple;
+}

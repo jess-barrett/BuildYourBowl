@@ -1,0 +1,70 @@
+﻿<Window x:Class="BuildYourBowl.PointOfSale.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:BuildYourBowl.PointOfSale"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="720" Width="1080">
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+			<ColumnDefinition Width="1*"/>
+			<ColumnDefinition Width="1*"/>
+			<ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="1*"/>
+        </Grid.ColumnDefinitions>
+		<Grid.RowDefinitions>
+			<RowDefinition Height="1*"/>
+			<RowDefinition Height="1*"/>
+			<RowDefinition Height="1*"/>
+			<RowDefinition Height="1*"/>
+			<RowDefinition Height="1*"/>
+			<RowDefinition Height="1*"/>
+			<RowDefinition Height="1*"/>
+			<RowDefinition Height="1*"/>
+		</Grid.RowDefinitions>
+
+        <Grid.Resources>
+            <Style TargetType="Button">
+                <Setter Property="BorderThickness" Value="1"/>
+                <Setter Property="FontSize" Value="20"/>
+                <Style.Triggers>
+                    <Trigger Property="IsMouseOver" Value="True">
+                        <Setter Property="BorderThickness" Value="2"/>
+                        <Setter Property="Background" Value="Gray"/>
+                    </Trigger>
+                </Style.Triggers>
+                <Style.Resources>
+                    <Style TargetType="Border">
+                        <Setter Property="CornerRadius" Value="10"/>
+                    </Style>
+                </Style.Resources>
+            </Style>
+        </Grid.Resources>
+
+        <local:OrderSummaryControl x:Name="OrderControl" Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="4" Grid.RowSpan="8"/>
+        <local:MenuItemControl x:Name="MenuControl" Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="4" Grid.RowSpan="8"/>
+        <local:FriesControl x:Name="FriesControl" Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="4" Grid.RowSpan="8" Visibility="Hidden"/>
+        <local:StreetCornControl x:Name="StreetCornControl" Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="4" Grid.RowSpan="8" Visibility="Hidden"/>
+        <local:RefriedBeansControl x:Name="RefriedBeansControl" Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="4" Grid.RowSpan="8" Visibility="Hidden"/>
+        <local:AguaFrescaControl x:Name="AguaFrescaControl" Grid.Row="0" Grid.ColumnSpan="4" Grid.RowSpan="8" Visibility="Hidden"/>
+        <local:HorchataControl x:Name="HorchataControl" Grid.Row="0" Grid.ColumnSpan="4" Grid.RowSpan="8" Visibility="Hidden"/>
+        <local:MilkControl x:Name="MilkControl" Grid.Row="0" Grid.ColumnSpan="4" Grid.RowSpan="8" Visibility="Hidden"/>
+        <local:EntreeControl x:Name="EntreeControl" Grid.Row="0" Grid.ColumnSpan="4" Grid.RowSpan="8" Visibility="Hidden"/>
+        <local:KidsMealControl x:Name="KidsMealControl" Grid.Row="0" Grid.ColumnSpan="4" Grid.RowSpan="8" Visibility="Hidden"/>
+        <local:PaymentControl x:Name="PaymentControl" Grid.Row="0" Grid.ColumnSpan="4" Grid.RowSpan="8" Visibility="Hidden"/>
+
+        <Button Name="Cancel" Click="CancelOrder" Grid.Column="0" Grid.Row="7" Margin="10" BorderBrush="Black" Background="Red">
+            <TextBlock Text="Cancel Order" TextWrapping="Wrap"/>
+        </Button>
+
+        <Button Name="Back" Click="BackToMenu" Grid.Column="1" Grid.Row="7" Margin="10" BorderBrush="Black" Background="LightGray">
+            <TextBlock Text="Back To Menu" TextWrapping="Wrap"/>
+        </Button>
+
+        <Button Name="Complete" Click="CompleteOrder" Grid.Column="2" Grid.Row="7" Margin="10" BorderBrush="Black" Background="Green">
+            <TextBlock Text="Complete Order" TextWrapping="Wrap"/>
+        </Button>
+    </Grid>
+</Window>

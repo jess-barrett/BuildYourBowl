@@ -1,0 +1,20 @@
+﻿<UserControl x:Class="BuildYourBowl.PointOfSale.CountBox"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:BuildYourBowl.PointOfSale"
+             mc:Ignorable="d" 
+             d:DesignHeight="50" d:DesignWidth="100">
+    <Grid MinWidth="80">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="2*"/>
+            <ColumnDefinition Width="3*"/>
+            <ColumnDefinition Width="2*"/>
+        </Grid.ColumnDefinitions>
+
+        <Button Grid.Column="0" Click="HandleDecrement">-</Button>
+        <TextBlock Grid.Column="1" Text="{Binding Path=Count, RelativeSource={RelativeSource Mode=FindAncestor, AncestorType=local:CountBox}}" TextAlignment="Center" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        <Button Grid.Column="2" Click="HandleIncrement">+</Button>
+    </Grid>
+</UserControl>

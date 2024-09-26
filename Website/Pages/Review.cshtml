@@ -1,0 +1,24 @@
+﻿@page
+@model Website.Pages.ReviewModel
+@using BuildYourBowl.Data;
+@{
+}
+
+<form id="Review" method="post">
+    <div class="form-group">
+        <h3>Reviews</h3>
+        <textarea class="form-control w-25" name="ReviewText" placeholder="Leave your review..."></textarea>
+        <input type="submit" value="Submit Review" class="btn btn-primary mt-2"></input>
+    </div>
+</form>
+
+<div>
+    @foreach (Review r in Model.AllReviews)
+    {
+        <div class="mt-4 w-25 border border-2">
+            <p>@r.Text</p>
+            <div class="mt-2">@r.Time.ToString()</div>
+        </div>
+    }
+</div>
+ 
